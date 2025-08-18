@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunker Trust Score</title>
+    <link rel="stylesheet" href="/static/home.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Bunker Trust Score <span class="info-icon" data-tooltip="Calculates occupant reliability">i</span></h1>
+        
+        <form id="trustForm" class="compact-form">
+            <div class="form-row">
+                <label for="yearsInNetwork">Years<span class="info-icon" data-tooltip="Time in network">i</span>:</label>
+                <input type="number" id="yearsInNetwork" min="0" required>
+            </div>
+
+            <div class="form-row">
+                <label for="referrals">Referrals<span class="info-icon" data-tooltip="Trusted references">i</span>:</label>
+                <input type="number" id="referrals" min="0" required>
+            </div>
+
+            <div class="form-row">
+                <label for="disciplineIncidents">Incidents<span class="info-icon" data-tooltip="Disciplinary issues">i</span>:</label>
+                <input type="number" id="disciplineIncidents" min="0" required>
+            </div>
+
+            <div class="form-row">
+                <label for="trainingLevel">Training<span class="info-icon" data-tooltip="Skill certification level">i</span>:</label>
+                <select id="trainingLevel" required>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="communityContributions">Contributions<span class="info-icon" data-tooltip="Community help">i</span>:</label>
+                <input type="number" id="communityContributions" min="0" required>
+            </div>
+
+            <button type="submit" class="btn">Calculate</button>
+        </form>
+
+        <div id="result" class="result-popup"></div>
+    </div>
+
+    <script src="/static/home.js"></script>
+</body>
+</html>
